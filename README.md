@@ -1,6 +1,6 @@
 # HVSA
 
-Official PyTorch implementation for **Hypersphere-Based Remote Sensing Cross-Modal Text–Image Retrieval via Curriculum Learning**.
+Official PyTorch implementation for [**Hypersphere-Based Remote Sensing Cross-Modal Text–Image Retrieval via Curriculum Learning**.(https://ieeexplore.ieee.org/document/10261223?source=authoralert)]
 
 ## News :tada:
 - 📣 Codes is coming soon (before Nov). 

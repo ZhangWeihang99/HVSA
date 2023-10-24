@@ -1,0 +1,51 @@
+experiment_name: 'HVSA_RSICD'
+
+optim:
+    epochs: 50
+    lr: 0.001
+    lr_decay_param: 0.1
+    lr_update_epoch: 20
+    grad_clip: 0
+    alpha: 0.2
+    resume: False
+
+loss:
+    adaptive_alignment:
+        beta: 0.5
+    feature_uniformity:
+        gamma: 2
+
+model:
+    name: HVSA
+    embed:
+        embed_dim: 512
+    finetune: True
+    seq2vec:
+        arch: skipthoughts
+        dir_st: /mnt/data/seq2vec
+        type: BayesianUniSkip
+        dropout: 0.25
+        fixed_emb: False
+
+logs:
+    eval_step: 1
+    print_freq: 10
+    ckpt_save_path: "/workspace/HVSA/checkpoint/"
+    logger_name: 'logs/'
+
+
+random_seed:
+    seed: [2023,2024,2025]
+    nums: 3
+    current_num: 0
+
+dataset:
+    datatype: rsicd
+    data_path: '/workspace/HVSA/data/rsicd_raw/'
+    image_path: '/mnt/data/dataset/RSICD/images/'
+    vocab_path: '/workspace/HVSA/vocab/rsicd_splits_vocab.json'
+    batch_size: 256
+    batch_size_val: 256
+    workers: 2
+
+GPU: V100

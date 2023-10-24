@@ -233,9 +233,6 @@ def load_model(options, model):
         checkpoint = torch.load(options['optim']['resume'])
         start_epoch = checkpoint['epoch']
         model.load_state_dict(checkpoint['model'])
-        # Eiters is used to show logs as the continuation of another
-        # training
-        model.Eiters = checkpoint['Eiters']
     else:
         start_epoch = 0
         print("=> no checkpoint found at '{}'".format(options['optim']['resume']))

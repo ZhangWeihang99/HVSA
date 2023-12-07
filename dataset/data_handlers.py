@@ -90,7 +90,7 @@ def generate_random_samples(options):
     random.shuffle(all_infos)
 
     # split_trainval
-    percent = 0.8
+    percent = 0.9
     train_infos = all_infos[:int(len(all_infos) * percent)]
     val_infos = all_infos[int(len(all_infos) * percent):]
 

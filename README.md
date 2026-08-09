@@ -1,3 +1,5 @@
+
+
 # HVSA
 
 Official PyTorch implementation for [**Hypersphere-Based Remote Sensing Cross-Modal Text–Image Retrieval via Curriculum Learning**](https://ieeexplore.ieee.org/document/10261223?source=authoralert).
@@ -34,11 +36,15 @@ Dataset splits can be found in [data/rsitmd_raw](data/rsitmd_raw).
 ```bash
 # RSITMD Dataset
 python train.py --config configs/HVSA_rsitmd.yaml
+# RSICD Dataset
+python train.py --config configs/HVSA_rsicd.yaml
 ```
 ## Evaluate
 ```bash
 # RSITMD Dataset
 python eval.py --config configs/HVSA_rsitmd.yaml
+# RSICD Dataset
+python eval.py --config configs/HVSA_rsicd.yaml
 ```
 ## Performance
 
@@ -58,4 +64,4 @@ If you find this repository useful, please consider giving a star :star: and cit
   doi={10.1109/TGRS.2023.3318227}}
 ```
 ## Acknowledgment
-The implementation of HVSA relies on resources from <a href="https://github.com/fartashf/vsepp">VSE++</a>, and <a href="https://github.com/xiaoyuan1996/AMFMN">AMFMN</a>. We thank the original authors for their open-sourcing. 
+The implementation of HVSA relies on resources from <a href="https://github.com/fartashf/vsepp">VSE++</a>, and <a href="https://github.com/xiaoyuan1996/AMFMN">AMFMN</a>. We thank the original authors for their open-sourcing.
